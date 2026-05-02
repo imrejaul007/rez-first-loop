@@ -11,7 +11,6 @@
     "test": "jest"
   },
   "dependencies": {
-    // "@rez/shared": "^1.0.0", // TODO: Publish and enable
     "axios": "^1.7.4",
     "bullmq": "^5.4.0",
     "dotenv": "^16.3.0",
