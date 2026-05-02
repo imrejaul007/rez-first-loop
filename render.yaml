@@ -1,0 +1,28 @@
+services:
+  - type: worker
+    name: rez-first-loop
+    runtime: node
+    region: oregon
+    branch: main
+    autoDeploy: true
+    buildCommand: npm install && npm run build
+    startCommand: node dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: INTERNAL_SERVICE_TOKENS_JSON
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+      - key: REZ_EVENT_PLATFORM_URL
+        sync: false
+      - key: REZ_ACTION_ENGINE_URL
+        sync: false
+      - key: REZ_FEEDBACK_SERVICE_URL
+        sync: false
+      - key: NEXTABIZ_URL
+        sync: false
